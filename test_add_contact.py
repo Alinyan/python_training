@@ -2,6 +2,7 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
 import unittest
 from contact import Contact
+from common import Common
 
 
 def is_alert_present(wd):
@@ -15,18 +16,17 @@ def is_alert_present(wd):
 class test_add_contact(unittest.TestCase):
     def setUp(self):
         self.wd = WebDriver()
+        self.common = Common()
         self.wd.implicitly_wait(60)
     
     def test_test_add_contact(self):
         wd = self.wd
-        self.open_home_page(wd)
-        self.login(wd)
+        common = self.common
+        common.login(wd, username="admin", password="secret")
         self.create_contact(wd, Contact(firstname="Olga", middlename="Petrovna", lastname="Petrova", nickname="Star", title="economist", company="OAO Dream-House",
                             address_company="Russia, Lenina 5", home_phone="7894563", mobile_phone="9221547586", work_phone="6123457", fax="6123458",
-                            email2="olga-star@oao-dream-house.com", email3="olga@dh.com", homepage="www.dream-house.com", byear="1982", ayear="2000",
-                            address2="Russia, Spb, Lenina 17", phone2="145", notes="Likes to read books"))
-        self.open_contacts_page(wd)
-        self.logout(wd)
+                            email2="olga-star@oao-dream-house.com", email3="olga@dh.com", homepage="www.dream-house.com", address2="Russia, Spb, Lenina 17", phone2="145", notes="Likes to read books"))
+        common.logout(wd)
 
     def create_contact(self, wd, contact):
         # init contact creation
@@ -74,20 +74,6 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("homepage").click()
         wd.find_element_by_name("homepage").clear()
         wd.find_element_by_name("homepage").send_keys(contact.homepage)
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[13]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[1]//option[13]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[9]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[2]//option[9]").click()
-        wd.find_element_by_name("byear").click()
-        wd.find_element_by_name("byear").clear()
-        wd.find_element_by_name("byear").send_keys(contact.byear)
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[14]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[3]//option[14]").click()
-        if not wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[10]").is_selected():
-            wd.find_element_by_xpath("//div[@id='content']/form/select[4]//option[10]").click()
-        wd.find_element_by_name("ayear").click()
-        wd.find_element_by_name("ayear").clear()
-        wd.find_element_by_name("ayear").send_keys(contact.ayear)
         wd.find_element_by_name("address2").click()
         wd.find_element_by_name("address2").clear()
         wd.find_element_by_name("address2").send_keys(contact.address2)
@@ -99,27 +85,10 @@ class test_add_contact(unittest.TestCase):
         wd.find_element_by_name("notes").send_keys(contact.notes)
         # Enter contact creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-
-    def logout(self, wd):
-        wd.find_element_by_link_text("Logout").click()
+        self.open_contacts_page(wd)
 
     def open_contacts_page(self, wd):
         wd.find_element_by_link_text("home page").click()
-
-    def login(self, wd):
-        # Input userName
-        wd.find_element_by_name("user").click()
-        wd.find_element_by_name("user").clear()
-        wd.find_element_by_name("user").send_keys("admin")
-        # Input Password
-        wd.find_element_by_name("pass").click()
-        wd.find_element_by_name("pass").clear()
-        wd.find_element_by_name("pass").send_keys("secret")
-        # Click submit
-        wd.find_element_by_css_selector("input[type=\"submit\"]").click()
-
-    def open_home_page(self, wd):
-        wd.get("http://localhost/addressbook/")
 
     def tearDown(self):
         self.wd.quit()
