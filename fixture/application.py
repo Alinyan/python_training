@@ -1,30 +1,15 @@
 from selenium.webdriver.firefox.webdriver import WebDriver
+from session import SessionHelper
 
-class Application():
 
+class Application:
     def __init__(self):
         self.wd = WebDriver()
         self.wd.implicitly_wait(60)
-
-    def login(self, username="admin", password="secret"):
-        self.open_home_page()
-        # Input userName
-        self.wd.find_element_by_name("user").click()
-        self.wd.find_element_by_name("user").clear()
-        self.wd.find_element_by_name("user").send_keys(username)
-        # Input Password
-        self.wd.find_element_by_name("pass").click()
-        self.wd.find_element_by_name("pass").clear()
-        self.wd.find_element_by_name("pass").send_keys(password)
-        # Click submit
-        self.wd.find_element_by_css_selector("input[type=\"submit\"]").click()
-        self.go_to_page(page="home")
+        self.session = SessionHelper(self)
 
     def open_home_page(self):
         self.wd.get("http://localhost/addressbook/")
-
-    def logout(self):
-        self.wd.find_element_by_link_text("Logout").click()
 
     def go_to_page(self, page):
         self.wd.find_element_by_link_text(page).click()
