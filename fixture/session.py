@@ -7,16 +7,12 @@ class SessionHelper:
     def login(self, username="admin", password="secret"):
         self.app.navigation.open_home_page()
         # Input userName
-        self.app.wd.find_element_by_name("user").click()
-        self.app.wd.find_element_by_name("user").clear()
-        self.app.wd.find_element_by_name("user").send_keys(username)
+        self.app.page.fill_field("user", username)
         # Input Password
-        self.app.wd.find_element_by_name("pass").click()
-        self.app.wd.find_element_by_name("pass").clear()
-        self.app.wd.find_element_by_name("pass").send_keys(password)
+        self.app.page.fill_field("pass", password)
         # Click submit
         self.app.wd.find_element_by_css_selector("input[type=\"submit\"]").click()
-        self.app.navigation.go_to_page(page="home")
+        self.app.navigation.go_to_page("home")
 
     def logout(self):
         self.app.wd.find_element_by_link_text("Logout").click()

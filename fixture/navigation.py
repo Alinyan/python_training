@@ -9,3 +9,4 @@ class NavigationHelper:
 
     def go_to_page(self, page):
         self.app.wd.find_element_by_link_text(page).click()
+

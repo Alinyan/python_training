@@ -9,15 +9,35 @@ class GroupHelper:
         # init group creation
         self.app.wd.find_element_by_name("new").click()
         # fill group form
-        self.app.wd.find_element_by_name("group_name").click()
-        self.app.wd.find_element_by_name("group_name").clear()
-        self.app.wd.find_element_by_name("group_name").send_keys(group.name)
-        self.app.wd.find_element_by_name("group_header").click()
-        self.app.wd.find_element_by_name("group_header").clear()
-        self.app.wd.find_element_by_name("group_header").send_keys(group.header)
-        self.app.wd.find_element_by_name("group_footer").click()
-        self.app.wd.find_element_by_name("group_footer").clear()
-        self.app.wd.find_element_by_name("group_footer").send_keys(group.footer)
+        self.app.page.fill_field(name="group_name", value=group.name)
+        self.app.page.fill_field(name="group_header", value=group.header)
+        self.app.page.fill_field(name="group_footer", value=group.footer)
         # submit group creation
         self.app.wd.find_element_by_name("submit").click()
-        self.app.navigation.go_to_page(page="group page")
+        self.app.navigation.go_to_page(page="groups")
+
+    def delete_first_group(self):
+        self.app.navigation.go_to_page(page="groups")
+        # select first group
+        self.app.wd.find_element_by_name("selected[]").click()
+        # submit deletion
+        self.app.wd.find_element_by_name("delete").click()
+        self.app.navigation.go_to_page(page="groups")
+
+
+    def edit_first_group(self, group):
+        self.app.navigation.go_to_page(page="groups")
+        # select first group
+        self.app.wd.find_element_by_name("selected[]").click()
+        # submit to edit
+        self.app.wd.find_element_by_name("edit").click()
+        # fill group form
+        self.app.page.fill_field(name="group_name", value=group.name)
+        self.app.page.fill_field(name="group_header", value=group.header)
+        self.app.page.fill_field(name="group_footer", value=group.footer)
+        # submit to update
+        self.app.wd.find_element_by_name("update").click()
+        self.app.navigation.go_to_page(page="groups")
+
+
+
