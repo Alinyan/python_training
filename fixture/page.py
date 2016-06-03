@@ -5,7 +5,8 @@ class PageHelper:
         self.app = app
 
     def fill_field(self, name, value):
-        self.app.wd.find_element_by_name(name).click()
-        self.app.wd.find_element_by_name(name).clear()
-        self.app.wd.find_element_by_name(name).send_keys(value)
+        if value is not None:
+            self.app.wd.find_element_by_name(name).click()
+            self.app.wd.find_element_by_name(name).clear()
+            self.app.wd.find_element_by_name(name).send_keys(value)
 
