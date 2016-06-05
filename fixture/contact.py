@@ -66,3 +66,7 @@ class ContactHelper:
         # submit to update
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[1]/input[@name='update']").click()
         self.app.navigation.go_to_page(page="home")
+
+    def count(self):
+        self.app.navigation.go_to_page("home")
+        return len(self.app.wd.find_elements_by_name("selected[]"))

@@ -42,3 +42,8 @@ class GroupHelper:
         self.app.page.fill_field(name="group_header", value=group.header)
         self.app.page.fill_field(name="group_footer", value=group.footer)
 
+    def count(self):
+        self.app.navigation.go_to_page(page="groups")
+        return len(self.app.wd.find_elements_by_name("selected[]"))
+
+
