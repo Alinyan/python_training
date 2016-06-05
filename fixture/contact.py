@@ -5,8 +5,9 @@ class ContactHelper:
         self.app = app
 
     def create(self, contact):
+        self.app.navigation.go_to_home_page()
         # init contact creation
-        self.app.navigation.go_to_page("add new")
+        self.app.wd.find_element_by_link_text("add new").click()
         # fill contact form
         self.app.page.fill_field(name="firstname", value=contact.firstname)
         self.app.page.fill_field(name="middlename", value=contact.middlename)
@@ -27,20 +28,20 @@ class ContactHelper:
         self.app.page.fill_field(name="notes", value=contact.notes)
         # Enter contact creation
         self.app.wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
-        self.app.navigation.go_to_page("home page")
+        self.app.navigation.go_to_home_page()
 
     def delete_first_contact(self):
-        self.app.navigation.go_to_page("home")
+        self.app.navigation.go_to_home_page()
         # select first contact
         self.app.wd.find_element_by_name("selected[]").click()
         # submit deletion
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/div[2]/input[@value='Delete']").click()
         # confirm deletion
         self.app.wd.switch_to_alert().accept()
-        self.app.navigation.go_to_page("home")
+        self.app.navigation.go_to_home_page()
 
     def edit_first_contact(self, contact):
-        self.app.navigation.go_to_page("home")
+        self.app.navigation.go_to_home_page()
         # select first group
         self.app.wd.find_element_by_name("selected[]").click()
         # submit to edit
@@ -65,8 +66,8 @@ class ContactHelper:
         self.app.page.fill_field(name="notes", value=contact.notes)
         # submit to update
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[1]/input[@name='update']").click()
-        self.app.navigation.go_to_page(page="home")
+        self.app.navigation.go_to_home_page()
 
     def count(self):
-        self.app.navigation.go_to_page("home")
+        self.app.navigation.go_to_home_page()
         return len(self.app.wd.find_elements_by_name("selected[]"))
