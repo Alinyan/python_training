@@ -1,3 +1,4 @@
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -15,7 +16,7 @@ class ContactHelper:
         self.app.page.fill_field(name="nickname", value=contact.nickname)
         self.app.page.fill_field(name="title", value=contact.title)
         self.app.page.fill_field(name="company", value=contact.company)
-        self.app.page.fill_field(name="address", value=contact.address_company)
+        self.app.page.fill_field(name="address", value=contact.address1)
         self.app.page.fill_field(name="home", value=contact.home_phone)
         self.app.page.fill_field(name="mobile", value=contact.mobile_phone)
         self.app.page.fill_field(name="work", value=contact.work_phone)
@@ -53,7 +54,7 @@ class ContactHelper:
         self.app.page.fill_field(name="nickname", value=contact.nickname)
         self.app.page.fill_field(name="title", value=contact.title)
         self.app.page.fill_field(name="company", value=contact.company)
-        self.app.page.fill_field(name="address", value=contact.address_company)
+        self.app.page.fill_field(name="address", value=contact.address1)
         self.app.page.fill_field(name="home", value=contact.home_phone)
         self.app.page.fill_field(name="mobile", value=contact.mobile_phone)
         self.app.page.fill_field(name="work", value=contact.work_phone)
@@ -71,3 +72,13 @@ class ContactHelper:
     def count(self):
         self.app.navigation.go_to_home_page()
         return len(self.app.wd.find_elements_by_name("selected[]"))
+
+    def get_list_contacts(self):
+        self.app.navigation.go_to_home_page()
+        list_contacts = []
+        for element in self.app.wd.find_elements_by_css_selector("tr[name=entry]"):
+            lastname = element.find_element_by_xpath("./td[2]").text
+            firstname = element.find_element_by_xpath("./td[3]").text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            list_contacts.append(Contact(firstname=firstname, lastname=lastname, id=id))
+        return list_contacts

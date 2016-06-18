@@ -47,7 +47,7 @@ class GroupHelper:
         self.app.navigation.go_to_group_page()
         return len(self.app.wd.find_elements_by_name("selected[]"))
 
-    def get_count_groups(self):
+    def get_list_groups(self):
         self.app.navigation.go_to_group_page()
         list_groups = []
         for element in self.app.wd.find_elements_by_css_selector("span.group"):
