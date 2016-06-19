@@ -1,5 +1,6 @@
 
 from model.group import Group
+from random import randrange
 
 class GroupHelper:
 
@@ -20,16 +21,22 @@ class GroupHelper:
         self.group_cache = None
 
     def delete_first_group(self):
+        self.delete_random_group(index=0)
+
+    def delete_random_group(self, index):
         self.app.navigation.go_to_group_page()
-        self.select_first_group()
+        self.select_random_group(index)
         # submit deletion
         self.app.wd.find_element_by_name("delete").click()
         self.app.navigation.go_to_group_page()
         self.group_cache = None
 
     def edit_first_group(self, new_group_data):
+        self.edit_random_group(0, new_group_data)
+
+    def edit_random_group(self, index, new_group_data):
         self.app.navigation.go_to_group_page()
-        self.select_first_group()
+        self.select_random_group(index)
         # open modification form
         self.app.wd.find_element_by_name("edit").click()
         # fill group form
@@ -39,8 +46,8 @@ class GroupHelper:
         self.app.navigation.go_to_group_page()
         self.group_cache = None
 
-    def select_first_group(self):
-        self.app.wd.find_element_by_name("selected[]").click()
+    def select_random_group(self, index):
+        self.app.wd.find_elements_by_name("selected[]")[index].click()
 
     def fill_group_form(self, group):
         self.app.page.fill_field(name="group_name", value=group.name)

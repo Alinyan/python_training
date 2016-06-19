@@ -35,9 +35,12 @@ class ContactHelper:
         self.contact_cache = None
 
     def delete_first_contact(self):
+        self.delete_random_contact(0)
+
+    def delete_random_contact(self, index):
         self.app.navigation.go_to_home_page()
-        # select first contact
-        self.app.wd.find_element_by_name("selected[]").click()
+        # select random contact
+        self.app.wd.find_elements_by_name("selected[]")[index].click()
         # submit deletion
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/div[2]/input[@value='Delete']").click()
         # confirm deletion
@@ -46,11 +49,14 @@ class ContactHelper:
         self.contact_cache = None
 
     def edit_first_contact(self, contact):
+        self.edit_random_contact(0, contact)
+
+    def edit_random_contact(self, index, contact):
         self.app.navigation.go_to_home_page()
-        # select first group
-        self.app.wd.find_element_by_name("selected[]").click()
+        # select random group
+        self.app.wd.find_elements_by_name("selected[]")[index].click()
         # submit to edit
-        self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/table/tbody/tr[2]/td[8]/a/img").click()
+        self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/table/tbody/tr["+str(index+2)+"]/td[8]/a/img").click()
         # fill group form
         self.app.page.fill_field(name="firstname", value=contact.firstname)
         self.app.page.fill_field(name="middlename", value=contact.middlename)
