@@ -127,7 +127,7 @@ class ContactHelper:
                                 map(lambda x: self.clear(x),
                                     filter(lambda x: x is not None, [contact.home_phone, contact.mobile_phone,
                                                                      contact.work_phone, contact.phone2]))))
-    
+
     def merge_emails(self, contact):
         return "\n".join(filter(lambda x: x != "",
                                 filter(lambda x: x is not None, [contact.email, contact.email2, contact.email3])))
