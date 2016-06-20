@@ -5,29 +5,24 @@ import pytest
 import string
 
 def random_string(prefix, maxlen):
-    char = string.ascii_letters + string.hexdigits + string.punctuation + ' '*15
+    char = string.ascii_letters + string.hexdigits + ' '*10 #+ string.punctuation
     return prefix + "".join([random.choice(char) for i in range(random.randrange(maxlen))])
 
-testdata = [
-    Contact(firstname=fn, middlename=mn, lastname=ln, nickname=nn, title=t, company=c, address1=a1, home_phone=hp,
-            mobile_phone=mp, work_phone=wp, fax=f, email2=e2, email3=e3, homepage=h, address2=a2, phone2=p2, notes=n)
-    for fn in ["", random_string("Firstname", 20)]
-    for mn in ["", random_string("Middlename", 20)]
-    for ln in ["", random_string("Lastname", 20)]
-    for nn in ["", random_string("Nickname", 20)]
-    for t in ["", random_string("title", 20)]
-    for c in ["", random_string("company", 20)]
-    for a1 in ["", random_string("address1", 50)]
-    for hp in ["", random_string("homephone", 15)]
-    for mp in ["", random_string("mobilephone", 15)]
-    for wp in ["", random_string("workphone", 15)]
-    for f in ["", random_string("fax", 15)]
-    for e2 in ["", random_string("email2", 30)]
-    for e3 in ["", random_string("email3", 30)]
-    for h in ["", random_string("homepage", 30)]
-    for a2 in ["", random_string("address2", 50)]
-    for p2 in ["", random_string("phone2", 15)]
-    for n in ["", random_string("notes", 100)]
+testdata = [Contact(firstname="Olga", middlename="Petrovna", lastname="Petrova", nickname="Star", title="economist",
+                    company="OAO Dream-House", address1="Russia, Lenina 5", home_phone="7894563", mobile_phone="9221547586",
+                    work_phone="6123457", fax="6123458", email2="olga-star@oao-dream-house.com", email3="olga@dh.com",
+                    homepage="www.dream-house.com", address2="Russia, Spb, Lenina 17", phone2="145", notes="Likes to read books")] + \
+           [Contact(firstname=random_string("Firstname", 20), middlename=random_string("middlename", 20), lastname=random_string("lastname", 20),
+                    nickname=random_string("nickname", 20), title=random_string("title", 20),
+                    company=random_string("company", 20), address1=random_string("address1", 20), home_phone=random_string("home_phone", 15),
+                    mobile_phone=random_string("mobile_phone", 15), work_phone=random_string("work_phone", 15), fax=random_string("fax", 15),
+                    email2=random_string("email2", 30), email3=random_string("email3", 30), homepage=random_string("homepage", 20),
+                    address2=random_string("address2", 50), phone2=random_string("phone2", 15), notes=random_string("notes", 50))] + \
+            [Contact(firstname=fn, address1=a1, work_phone=wp, email2=e2)
+                    for fn in ["", random_string("Firstname", 20)]
+                    for a1 in ["", random_string("address1", 50)]
+                    for wp in ["", random_string("workphone", 15)]
+                    for e2 in ["", random_string("email2", 30)]
 ]
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
@@ -80,14 +75,14 @@ def test_contact_on_edit_page(app):
     assert contact_from_home_page.emails_from_home_page == app.contact.merge_emails(contact_from_edit_page)
     assert contact_from_home_page.phones_from_home_page == app.contact.merge_phones(contact_from_edit_page)
 
-def test_contact_on_view_page(app):
-    contacts = app.contact.get_list_contacts()
-    index = random.randrange(len(contacts))
-    contact_from_edit_page = app.contact.get_contact_from_edit_page(index)
-    contact_from_view_page = app.contact.get_contact_from_view_page(index)
-    assert contact_from_view_page.home_phone == contact_from_edit_page.home_phone
-    assert contact_from_view_page.work_phone == contact_from_edit_page.work_phone
-    assert contact_from_view_page.mobile_phone == contact_from_edit_page.mobile_phone
-    assert contact_from_view_page.phone2 == contact_from_edit_page.phone2
+# def test_contact_on_view_page(app):
+#     contacts = app.contact.get_list_contacts()
+#     index = random.randrange(len(contacts))
+#     contact_from_edit_page = app.contact.get_contact_from_edit_page(index)
+#     contact_from_view_page = app.contact.get_contact_from_view_page(index)
+#     assert contact_from_view_page.home_phone == contact_from_edit_page.home_phone
+#     assert contact_from_view_page.work_phone == contact_from_edit_page.work_phone
+#     assert contact_from_view_page.mobile_phone == contact_from_edit_page.mobile_phone
+#     assert contact_from_view_page.phone2 == contact_from_edit_page.phone2
 
 

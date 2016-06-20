@@ -5,7 +5,7 @@ import pytest
 import string
 
 def random_string(prefix, maxlen):
-    char = string.ascii_letters + string.hexdigits + string.punctuation + ' '*15
+    char = string.ascii_letters + string.hexdigits + ' '*15 #+ string.punctuation
     return prefix + "".join([random.choice(char) for i in range(random.randrange(maxlen))])
 
 testdata = [

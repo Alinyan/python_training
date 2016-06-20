@@ -5,7 +5,7 @@ class NavigationHelper:
         self.app = app
 
     def open_start_page(self):
-        self.app.wd.get("http://localhost/addressbook/")
+        self.app.wd.get(self.app.baseURL)
 
     def go_to_home_page(self):
         if not (len(self.app.wd.find_elements_by_name("MainForm")) > 0):
