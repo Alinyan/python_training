@@ -1,4 +1,5 @@
 from model.contact import Contact
+import re
 
 class ContactHelper:
 
@@ -52,11 +53,7 @@ class ContactHelper:
         self.edit_random_contact(0, contact)
 
     def edit_random_contact(self, index, contact):
-        self.app.navigation.go_to_home_page()
-        # select random group
-        self.app.wd.find_elements_by_name("selected[]")[index].click()
-        # submit to edit
-        self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/table/tbody/tr["+str(index+2)+"]/td[8]/a/img").click()
+        self.app.navigation.go_to_edit_contact_page(index)
         # fill group form
         self.app.page.fill_field(name="firstname", value=contact.firstname)
         self.app.page.fill_field(name="middlename", value=contact.middlename)
@@ -89,8 +86,55 @@ class ContactHelper:
             self.app.navigation.go_to_home_page()
             self.contact_cache = []
             for element in self.app.wd.find_elements_by_css_selector("tr[name=entry]"):
-                lastname = element.find_element_by_xpath("./td[2]").text
-                firstname = element.find_element_by_xpath("./td[3]").text
+                cells = element.find_elements_by_tag_name("td")
+                lastname = cells[1].text
+                firstname = cells[2].text
+                address1 = cells[3].text
+                all_emails = cells[4].text
+                all_phones = cells[5].text
                 id = element.find_element_by_name("selected[]").get_attribute("value")
-                self.contact_cache.append(Contact(firstname=firstname, lastname=lastname, id=id))
+                self.contact_cache.append(Contact(firstname=firstname, lastname=lastname, address1=address1, id=id,
+                                                  phones_from_home_page=all_phones, emails_from_home_page=all_emails))
         return list(self.contact_cache)
+
+    def get_contact_from_edit_page(self, index):
+        self.app.navigation.go_to_edit_contact_page(index)
+        id = self.app.wd.find_element_by_name("id").get_attribute("value")
+        firstname = self.app.wd.find_element_by_name("firstname").get_attribute("value")
+        lastname = self.app.wd.find_element_by_name("lastname").get_attribute("value")
+        address1 = self.app.wd.find_element_by_name("address").get_attribute("value")
+        email = self.app.wd.find_element_by_name("email").get_attribute("value")
+        email2 = self.app.wd.find_element_by_name("email2").get_attribute("value")
+        email3 = self.app.wd.find_element_by_name("email3").get_attribute("value")
+        work_phone = self.app.wd.find_element_by_name("work").get_attribute("value")
+        home_phone = self.app.wd.find_element_by_name("home").get_attribute("value")
+        mobile_phone = self.app.wd.find_element_by_name("mobile").get_attribute("value")
+        phone2 = self.app.wd.find_element_by_name("phone2").get_attribute("value")
+        return Contact(lastname=lastname, firstname=firstname, id=id, address1=address1, email=email, email2=email2,
+                       email3=email3, home_phone=home_phone, work_phone=work_phone, mobile_phone=mobile_phone, phone2=phone2)
+
+    def get_contact_from_view_page(self, index):
+        self.app.navigation.go_to_view_contact_page(index)
+        text = self.app.wd.find_element_by_id("content").text
+        home_phone = re.search("H: (.*)", text).group(1)
+        work_phone = re.search("W: (.*)", text).group(1)
+        mobile_phone = re.search("M: (.*)", text).group(1)
+        phone2 = re.search("P: (.*)", text).group(1)
+        return Contact(home_phone=home_phone, work_phone=work_phone, mobile_phone=mobile_phone, phone2=phone2)
+
+    def merge_phones(self, contact):
+        return "\n".join(filter(lambda x: x != "",
+                                map(lambda x: self.clear(x),
+                                    filter(lambda x: x is not None, [contact.home_phone, contact.mobile_phone,
+                                                                     contact.work_phone, contact.phone2]))))
+    
+    def merge_emails(self, contact):
+        return "\n".join(filter(lambda x: x != "",
+                                filter(lambda x: x is not None, [contact.email, contact.email2, contact.email3])))
+
+    def clear(self, str):
+        return re.sub("() -", "", str)
+
+
+
+

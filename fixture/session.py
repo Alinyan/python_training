@@ -11,7 +11,7 @@ class SessionHelper:
         # Input Password
         self.app.page.fill_field("pass", password)
         # Click submit
-        self.app.wd.find_element_by_css_selector("input[type=\"submit\"]").click()
+        self.app.wd.find_element_by_css_selector("input[type='submit']").click()
         self.app.navigation.go_to_home_page()
 
     def logout(self):
@@ -21,7 +21,7 @@ class SessionHelper:
         return len(self.app.wd.find_elements_by_link_text("Logout")) > 0
 
     def is_logged_in_as(self, username):
-        return self.app.wd.find_element_by_xpath("//div/div[1]/form/b").text == "("+username+")"
+        return self.app.wd.find_element_by_xpath("//div/div[1]/form/b").text[1:-1] == username
 
     def ensure_logout(self):
         if self.is_logged_in():
