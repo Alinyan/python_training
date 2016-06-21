@@ -1,29 +1,9 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
+from data.contact import constant_data as testdata
 import random
 import pytest
-import string
 
-def random_string(prefix, maxlen):
-    char = string.ascii_letters + string.hexdigits + ' '*10 #+ string.punctuation
-    return prefix + "".join([random.choice(char) for i in range(random.randrange(maxlen))])
-
-testdata = [Contact(firstname="Olga", middlename="Petrovna", lastname="Petrova", nickname="Star", title="economist",
-                    company="OAO Dream-House", address1="Russia, Lenina 5", home_phone="7894563", mobile_phone="9221547586",
-                    work_phone="6123457", fax="6123458", email2="olga-star@oao-dream-house.com", email3="olga@dh.com",
-                    homepage="www.dream-house.com", address2="Russia, Spb, Lenina 17", phone2="145", notes="Likes to read books")] + \
-           [Contact(firstname=random_string("Firstname", 20), middlename=random_string("middlename", 20), lastname=random_string("lastname", 20),
-                    nickname=random_string("nickname", 20), title=random_string("title", 20),
-                    company=random_string("company", 20), address1=random_string("address1", 20), home_phone=random_string("home_phone", 15),
-                    mobile_phone=random_string("mobile_phone", 15), work_phone=random_string("work_phone", 15), fax=random_string("fax", 15),
-                    email2=random_string("email2", 30), email3=random_string("email3", 30), homepage=random_string("homepage", 20),
-                    address2=random_string("address2", 50), phone2=random_string("phone2", 15), notes=random_string("notes", 50))] + \
-            [Contact(firstname=fn, address1=a1, work_phone=wp, email2=e2)
-                    for fn in ["", random_string("Firstname", 20)]
-                    for a1 in ["", random_string("address1", 50)]
-                    for wp in ["", random_string("workphone", 15)]
-                    for e2 in ["", random_string("email2", 30)]
-]
 
 @pytest.mark.parametrize("contact", testdata, ids=[repr(x) for x in testdata])
 def test_add_contact(app, contact):
