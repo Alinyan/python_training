@@ -31,7 +31,7 @@ random_data = [
     for i in range(number)
 ]
 
-json_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", file)
+file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", file)
 
-with open(json_file, "w") as f:
+with open(file, "w") as f:
     f.write(json.dumps(random_data, default=lambda x: x.__dict__, indent=2))
