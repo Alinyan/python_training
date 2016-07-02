@@ -2,7 +2,7 @@ from model.contact import Contact
 import random
 import string
 import os.path
-import json
+import jsonpickle
 import getopt
 import sys
 
@@ -23,7 +23,7 @@ for o, a in opts:
         file = a
 
 def random_string(prefix, maxlen):
-    char = string.ascii_letters + string.hexdigits + ' '*15 #+ string.punctuation
+    char = string.ascii_letters + string.hexdigits + ' '*5 #+ string.punctuation
     return prefix + "".join([random.choice(char) for i in range(random.randrange(maxlen))])
 
 random_data = [
@@ -39,4 +39,5 @@ random_data = [
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", file)
 
 with open(file, "w") as f:
-    f.write(json.dumps(random_data, default=lambda x: x.__dict__, indent=2))
+    jsonpickle.set_encoder_options("json", indent=2)
+    f.write(jsonpickle.encode(random_data))
