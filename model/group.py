@@ -13,11 +13,11 @@ class Group:
 
     def __eq__(self, other):
         return (self.id is None or other.id is None or self.id == other.id) \
-               and (self.name == other.name or self.name is None or other.name is None) \
-               and (self.header == other.header or self.header is None or other.header is None) \
-               and (self.footer == other.footer or self.footer is None or other.footer is None)
+            and (self.name == other.name or self.name is None or other.name is None) #\
+            #and (self.header == other.header or self.header is None or other.header is None) \
+            #and (self.footer == other.footer or self.footer is None or other.footer is None)
 
-    def id(self):
+    def id_or_max(self):
         if self.id:
             return int(self.id)
         else:

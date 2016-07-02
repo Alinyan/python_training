@@ -9,7 +9,7 @@ def test_add_group(app, json_groups):
     assert len(old_list_groups) + 1 == app.group.count()
     new_list_groups = app.group.get_list_groups()
     old_list_groups.append(json_groups)
-    assert sorted(new_list_groups, key=Group.id) == sorted(old_list_groups, key=Group.id)
+    assert sorted(new_list_groups, key=Group.id_or_max) == sorted(old_list_groups, key=Group.id_or_max)
 
 def test_delete_random_group(app, data_groups):
     if app.group.count() == 0:
@@ -32,7 +32,7 @@ def test_edit_first_group(app, data_groups):
     assert len(old_list_groups) == app.group.count()
     new_list_groups = app.group.get_list_groups()
     old_list_groups[0] = group
-    assert sorted(new_list_groups, key=Group.id) == sorted(old_list_groups, key=Group.id)
+    assert sorted(new_list_groups, key=Group.id_or_max) == sorted(old_list_groups, key=Group.id_or_max)
 
 def test_modify_group_name(app, data_groups):
     if app.group.count() == 0:
@@ -45,7 +45,7 @@ def test_modify_group_name(app, data_groups):
     assert len(old_list_groups) == app.group.count()
     new_list_groups = app.group.get_list_groups()
     old_list_groups[index] = group
-    assert sorted(new_list_groups, key=Group.id) == sorted(old_list_groups, key=Group.id)
+    assert sorted(new_list_groups, key=Group.id_or_max) == sorted(old_list_groups, key=Group.id_or_max)
 
 def test_modify_group_header(app, data_groups):
     if app.group.count() == 0:
@@ -58,4 +58,11 @@ def test_modify_group_header(app, data_groups):
     assert len(old_list_groups) == app.group.count()
     new_list_groups = app.group.get_list_groups()
     old_list_groups[index] = group
-    assert sorted(new_list_groups, key=Group.id) == sorted(old_list_groups, key=Group.id)
+    assert sorted(new_list_groups, key=Group.id_or_max) == sorted(old_list_groups, key=Group.id_or_max)
+
+def test_group_list(app, db):
+    def clean(group):
+        return Group(id=group.id, name=group.name.strip())
+    sorted_db_list = sorted(map(clean, db.get_list_groups()), key=Group.id_or_max)
+    sorted_ui_list = sorted(app.group.get_list_groups(), key=Group.id_or_max)
+    assert sorted_ui_list == sorted_db_list
