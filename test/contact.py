@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 import random
-
+import re
 
 def test_add_contact(app, json_contacts):
     old_list_contacts = app.contact.get_list_contacts()
@@ -47,6 +47,13 @@ def test_contact_on_edit_page(app):
     assert contact_from_home_page.address1 == contact_from_edit_page.address1
     assert contact_from_home_page.emails_from_home_page == app.contact.merge_emails(contact_from_edit_page)
     assert contact_from_home_page.phones_from_home_page == app.contact.merge_phones(contact_from_edit_page)
+
+def test_contact_list(app, db):
+    def clean(contact):
+        return Contact(id=contact.id, name=re.sub(r'\s+', ' ', contact.name.strip()))
+    sorted_db_list = sorted(map(clean, db.get_list_contacts()), key=Contact.id_or_max)
+    sorted_ui_list = sorted(app.contact.get_list_contacts(), key=Contact.id_or_max)
+    assert sorted_ui_list == sorted_db_list
 
 # def test_contact_on_view_page(app):
 #     contacts = app.contact.get_list_contacts()

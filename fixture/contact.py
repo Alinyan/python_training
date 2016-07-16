@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from model.contact import Contact
 import re
 
@@ -87,12 +88,12 @@ class ContactHelper:
             self.contact_cache = []
             for element in self.app.wd.find_elements_by_css_selector("tr[name=entry]"):
                 cells = element.find_elements_by_tag_name("td")
-                lastname = cells[1].text
-                firstname = cells[2].text
-                address1 = cells[3].text
-                all_emails = cells[4].text
-                all_phones = cells[5].text
-                id = element.find_element_by_name("selected[]").get_attribute("value")
+                lastname = cells[1].text.encode('utf-8')
+                firstname = cells[2].text.encode('utf-8')
+                address1 = cells[3].text.encode('utf-8')
+                all_emails = cells[4].text.encode('utf-8')
+                all_phones = cells[5].text.encode('utf-8')
+                id = element.find_element_by_name("selected[]").get_attribute("value").encode('utf-8')
                 self.contact_cache.append(Contact(firstname=firstname, lastname=lastname, address1=address1, id=id,
                                                   phones_from_home_page=all_phones, emails_from_home_page=all_emails))
         return list(self.contact_cache)
