@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import pymysql.cursors
 from model.group import Group
+from model.contact import Contact
 
 class DBFixture:
 
@@ -27,10 +28,15 @@ class DBFixture:
         list_contact = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select group_id, group_name, group_header, group_footer from group_list")
+            cursor.execute("SELECT id, firstname, middlename, lastname, nickname, company, title, address, home, "
+                           "mobile, work, fax, email, email2, email3, homepage, address2, phone2, notes FROM addressbook where deprecated is null")
             for row in cursor.fetchall():
-                (id, name, header, footer) = row
-                list_contact.append(Group(id=str(id), name=name, header=header, footer=footer))
+                (id, firstname, middlename, lastname, nickname, company, title, address, home, mobile, work, fax,
+                 email, email2, email3, homepage, address2, phone2, notes) = row
+                list_contact.append(Contact(id=str(id), firstname=firstname, middlename=middlename, lastname=lastname,
+                                    nickname=nickname, title=title, company=company, address1=address, home_phone=home,
+                                    mobile_phone=mobile, work_phone=work, fax=fax, email=email, email2=email2,
+                                    email3=email3, homepage=homepage, address2=address2, phone2=phone2, notes=notes))
         finally:
             cursor.close()
         return list_contact
