@@ -13,7 +13,7 @@ except getopt.GetoptError as err:
     getopt.usage()
     sys.exit(2)
 
-number = 3
+number = 2
 file = "data/contacts.json"
 
 for o, a in opts:

@@ -55,3 +55,44 @@ def test_contact_on_edit_page(app):
     assert contact_from_home_page.address1 == contact_from_edit_page.address1
     assert contact_from_home_page.all_emails == app.contact.merge_emails(contact_from_edit_page)
     assert contact_from_home_page.all_phones == app.contact.merge_phones(contact_from_edit_page)
+
+def test_add_contact_in_group(app, db, json_contacts, json_groups):
+    if len(db.get_list_groups()) == 0:
+        app.group.create(json_groups)
+    group = random.choice(db.get_list_groups())
+    old_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    app.contact.create_with_add_group(json_contacts, group.name)
+    new_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    old_list_contacts_with_group.append(json_contacts)
+    assert sorted(new_list_contacts_with_group, key=Contact.id_or_max) == sorted(old_list_contacts_with_group, key=Contact.id_or_max)
+
+def test_delete_contact_from_group(app, db, json_contacts, json_groups):
+    if len(db.get_list_groups()) == 0:
+        app.group.create(json_groups)
+    group = random.choice(db.get_list_groups())
+    if len(db.get_contacts_in_group_by_name(group)) == 0:
+        app.contact.create_with_add_group(json_contacts, group.name)
+    contact = random.choice(db.get_contacts_in_group_by_name(group))
+    old_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    old_list_contacts_without_group = db.get_contacts_not_in_group_by_name(group)
+    app.contact.delete_contact_from_group(contact.id, group.name)
+    new_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    new_list_contacts_without_group = db.get_contacts_not_in_group_by_name(group)
+    old_list_contacts_with_group.remove(contact)
+    old_list_contacts_without_group.append(contact)
+    assert sorted(new_list_contacts_with_group, key=Contact.id_or_max) == sorted(old_list_contacts_with_group, key=Contact.id_or_max)
+    assert sorted(new_list_contacts_without_group, key=Contact.id_or_max) == sorted(old_list_contacts_without_group, key=Contact.id_or_max)
+
+def test_add_group_for_contact(app, db, json_contacts, json_groups):
+    if len(db.get_list_groups()) == 0:
+        app.group.create(json_groups)
+    group = random.choice(db.get_list_groups())
+    if len(db.get_contacts_not_in_group_by_name(group)) == 0:
+        app.contact.create(json_contacts)
+    contact = random.choice(db.get_contacts_not_in_group_by_name(group))
+    old_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    app.contact.add_group(contact.id, group.name)
+    new_list_contacts_with_group = db.get_contacts_in_group_by_name(group)
+    old_list_contacts_with_group.append(contact)
+    assert sorted(new_list_contacts_with_group, key=Contact.id_or_max) == sorted(old_list_contacts_with_group, key=Contact.id_or_max)
+
