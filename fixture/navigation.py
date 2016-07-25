@@ -40,4 +40,4 @@ class NavigationHelper:
 
     def select_contact_by_id(self, id):
         self.go_to_home_page()
-        self.app.wd.find_element_by_css_selector("input[id='%s']" % id).click()
+        self.app.wd.find_element_by_xpath("//input[@id='%s']" % id).click()

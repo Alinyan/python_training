@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 import random
+import re
 
-def test_add_contact(app, db, check_ui, json_contacts):
+def test_add_contact1(app, db, check_ui, json_contacts):
     if len(db.get_list_contacts()) == 0:
         app.contact.create(json_contacts)
     old_list_contacts = db.get_list_contacts()
@@ -11,7 +12,7 @@ def test_add_contact(app, db, check_ui, json_contacts):
     old_list_contacts.append(json_contacts)
     assert sorted(new_list_contacts, key=Contact.id_or_max) == sorted(old_list_contacts, key=Contact.id_or_max)
     if check_ui:
-        assert sorted(new_list_contacts, key=Contact.id_or_max) == sorted(app.contact.get_list_contacts(), key=Contact.id_or_max)
+        app.contact.check_ui_data(new_list_contacts)
 
 def test_delete_random_contact(app, db, check_ui, data_contacts):
     if len(db.get_list_contacts()) == 0:
@@ -23,7 +24,7 @@ def test_delete_random_contact(app, db, check_ui, data_contacts):
     old_list_contacts.remove(contact)
     assert old_list_contacts == new_list_contacts
     if check_ui:
-        assert sorted(new_list_contacts, key=Contact.id_or_max) == sorted(app.contact.get_list_contacts(), key=Contact.id_or_max)
+        app.contact.check_ui_data(new_list_contacts)
 
 def test_edit_random_contact(app, db, check_ui, data_contacts):
     if len(db.get_list_contacts()) == 0:
@@ -43,16 +44,15 @@ def test_edit_random_contact(app, db, check_ui, data_contacts):
     old_list_contacts[index] = edit_contact
     assert sorted(new_list_contacts, key=Contact.id_or_max) == sorted(old_list_contacts, key=Contact.id_or_max)
     if check_ui:
-        assert sorted(new_list_contacts, key=Contact.id_or_max) == sorted(app.contact.get_list_contacts(), key=Contact.id_or_max)
+        app.contact.check_ui_data(new_list_contacts)
 
 def test_contact_on_edit_page(app):
     contacts = app.contact.get_list_contacts()
     index = random.randrange(len(contacts))
     contact_from_home_page = app.contact.get_list_contacts()[index]
     contact_from_edit_page = app.contact.get_contact_from_edit_page(index)
-    assert contact_from_home_page.lastname == contact_from_edit_page.lastname
-    assert contact_from_home_page.firstname == contact_from_edit_page.firstname
-    assert contact_from_home_page.address1 == contact_from_edit_page.address1
+    assert contact_from_home_page.lastname == app.contact.make_one_space(contact_from_edit_page.lastname)
+    assert contact_from_home_page.firstname == app.contact.make_one_space(contact_from_edit_page.firstname)
     assert contact_from_home_page.all_emails == app.contact.merge_emails(contact_from_edit_page)
     assert contact_from_home_page.all_phones == app.contact.merge_phones(contact_from_edit_page)
 

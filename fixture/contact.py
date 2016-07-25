@@ -2,7 +2,6 @@
 from model.contact import Contact
 from selenium.webdriver.support.select import Select
 import re
-import random
 
 
 class ContactHelper:
@@ -213,24 +212,41 @@ class ContactHelper:
 
     def merge_emails(self, contact):
         return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: self.clear(x),
-                                filter(lambda x: x is not None, [contact.email, contact.email2, contact.email3]))))
+                            #map(lambda x: self.clear(x),
+                                filter(lambda x: x is not None, [contact.email, contact.email2, contact.email3])))#)
 
     def clear(self, str):
-        return re.sub("() -\s", "", str)
+        return re.sub("[() -]", "", str)
+
+    def make_one_space(self, str):
+        return re.sub("\s+", " ", str)
 
     def add_group(self, contact_id,  name_group):
         self.app.navigation.go_to_home_page()
         # select contact by id
-        self.app.wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
+        self.app.navigation.select_contact_by_id(contact_id)
         # choose group by name
         Select(self.app.wd.find_element_by_xpath("//select[@name='to_group']")).select_by_visible_text(name_group)
         # submit add to group
-        self.app.wd.find_element_by_xpath("//input[@name='add']").click()
+        self.app.wd.find_element_by_xpath("//input[@value='Add to']").click()
         # confirm deletion
         self.app.navigation.go_to_home_page()
         self.contact_cache = None
 
+    def check_ui_data(self, list_contacts_from_db):
+        list_contacts_from_home_page = sorted(self.app.contact.get_list_contacts(), key=Contact.id_or_max)
+        list_contacts_from_db = sorted(list_contacts_from_db, key=Contact.id_or_max)
+        assert len(list_contacts_from_db) == len(list_contacts_from_home_page)
+        index = 0
+        while index < len(list_contacts_from_home_page):
+            contact_from_db = list_contacts_from_db[index]
+            contact_from_page = list_contacts_from_home_page[index]
+            assert self.app.contact.make_one_space(contact_from_db.lastname) == contact_from_page.lastname
+            assert self.app.contact.make_one_space(contact_from_db.firstname) == contact_from_page.firstname
+            assert self.app.contact.make_one_space(contact_from_db.address1) == contact_from_page.address1
+            assert self.app.contact.merge_emails(contact_from_db) == contact_from_page.all_emails
+            assert self.app.contact.merge_phones(contact_from_db) == contact_from_page.all_phones
+            index = index + 1
 
 
 
