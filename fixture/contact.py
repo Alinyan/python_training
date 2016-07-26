@@ -219,7 +219,7 @@ class ContactHelper:
         return re.sub("[() -]", "", str)
 
     def make_one_space(self, str):
-        return re.sub("\s+", " ", str)
+        return (re.sub("\s+", " ", str)).strip()
 
     def add_group(self, contact_id,  name_group):
         self.app.navigation.go_to_home_page()
