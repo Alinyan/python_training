@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160726 23:18:50.700" generator="Robot 3.0 (Python 2.7.10 on win32)">
+<suite source="c:\Training\python_training\rf\tests_group.robot" id="s1" name="Tests Group">
+<kw type="setup" name="Init Fixtures">
+<msg timestamp="20160726 23:18:50.750" level="FAIL">No keyword with name 'Init Fixtures' found.</msg>
+<status status="FAIL" endtime="20160726 23:18:50.750" starttime="20160726 23:18:50.750"></status>
+</kw>
+<test id="s1-t1" name="Add new group">
+<status status="FAIL" endtime="20160726 23:18:50.750" critical="yes" starttime="20160726 23:18:50.750">Parent suite setup failed:
+No keyword with name 'Init Fixtures' found.</status>
+</test>
+<test id="s1-t2" name="Delete group">
+<status status="FAIL" endtime="20160726 23:18:50.760" critical="yes" starttime="20160726 23:18:50.760">Parent suite setup failed:
+No keyword with name 'Init Fixtures' found.</status>
+</test>
+<kw type="teardown" name="Destroy Fixtures">
+<msg timestamp="20160726 23:18:50.760" level="FAIL">No keyword with name 'Destroy Fixtures' found.</msg>
+<status status="FAIL" endtime="20160726 23:18:50.760" starttime="20160726 23:18:50.760">No keyword with name 'Destroy Fixtures' found.</status>
+</kw>
+<status status="FAIL" endtime="20160726 23:18:50.760" starttime="20160726 23:18:50.700">Suite setup failed:
+No keyword with name 'Init Fixtures' found.
+
+Also suite teardown failed:
+No keyword with name 'Destroy Fixtures' found.</status>
+</suite>
+<statistics>
+<total>
+<stat fail="2" pass="0">Critical Tests</stat>
+<stat fail="2" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="2" id="s1" name="Tests Group" pass="0">Tests Group</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20160726 23:18:50.730" level="ERROR">Error in file 'c:\Training\python_training\rf\tests_group.robot': Importing test library 'rf.Addressbook' failed: ImportError: No module named pytest
+Traceback (most recent call last):
+  File "rf\Addressbook.py", line 1, in &lt;module&gt;
+    import pytest
+PYTHONPATH:
+  C:\Python27\Scripts
+  C:\Python27\lib\site-packages\SeleniumLibrary\lib
+  C:\WINDOWS\system32\python27.zip
+  C:\Python27\DLLs
+  C:\Python27\lib
+  C:\Python27\lib\plat-win
+  C:\Python27\lib\lib-tk
+  C:\Python27
+  C:\Python27\lib\site-packages
+  C:\Python27\lib\site-packages\wx-2.8-msw-unicode</msg>
+</errors>
+</robot>
