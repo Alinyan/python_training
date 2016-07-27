@@ -101,7 +101,6 @@ class ContactHelper:
         # submit deletion
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/div[3]/input[@name='remove']").click()
         self.app.navigation.go_to_home_page()
-        Select(self.app.wd.find_element_by_xpath("//select[@name='group']")).select_by_visible_text("[all]")
         self.contact_cache = None
 
     def edit_first_contact(self, contact):

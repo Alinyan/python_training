@@ -1,3 +1,4 @@
+from selenium.webdriver.support.select import Select
 
 class NavigationHelper:
 
@@ -10,6 +11,7 @@ class NavigationHelper:
     def go_to_home_page(self):
         if not (len(self.app.wd.find_elements_by_name("MainForm")) > 0):
             self.app.wd.find_element_by_link_text("home").click()
+            Select(self.app.wd.find_element_by_xpath("//select[@name='group']")).select_by_visible_text("[all]")
 
     def go_to_group_page(self):
         wd = self.app.wd
