@@ -18,7 +18,7 @@ Delete group
     ${len}=    Get Length    ${old_list}
     ${index}=    Evaluate   random.randrange(len(${len}))    random
     ${group}=   Get From List   ${old_list}   ${index}
-    Remove group   ${group}
+    Delete group   ${group}
     ${new_list}=   Get Group List
     Remove Values From List    ${old_list}    ${group}
     Group Lists Should Be Equal    ${new_list}    ${old_list}
