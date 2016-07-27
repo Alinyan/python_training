@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 import random
-import re
+
 
 def test_add_contact1(app, db, check_ui, json_contacts):
     if len(db.get_list_contacts()) == 0:

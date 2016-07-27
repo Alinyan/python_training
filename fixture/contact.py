@@ -100,8 +100,8 @@ class ContactHelper:
         self.app.wd.find_element_by_css_selector("input[value='%s']" % contact_id).click()
         # submit deletion
         self.app.wd.find_element_by_xpath("//div[@id='content']/form[@name='MainForm']/div[3]/input[@name='remove']").click()
-        # confirm removing
         self.app.navigation.go_to_home_page()
+        Select(self.app.wd.find_element_by_xpath("//select[@name='group']")).select_by_visible_text("[all]")
         self.contact_cache = None
 
     def edit_first_contact(self, contact):
@@ -222,7 +222,6 @@ class ContactHelper:
         return (re.sub("\s+", " ", str)).strip()
 
     def add_group(self, contact_id,  name_group):
-        self.app.navigation.go_to_home_page()
         # select contact by id
         self.app.navigation.select_contact_by_id(contact_id)
         # choose group by name
