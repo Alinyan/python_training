@@ -16,14 +16,23 @@ Add new group
 Delete group
     ${old_list}=   Get Group List
     ${len}=    Get Length    ${old_list}
-    ${index}=    Evaluate   random.randrange(len(${len}))    random
+    ${index}=    Evaluate   random.randrange(${len})    random
     ${group}=   Get From List   ${old_list}   ${index}
     Delete group   ${group}
     ${new_list}=   Get Group List
     Remove Values From List    ${old_list}    ${group}
     Group Lists Should Be Equal    ${new_list}    ${old_list}
 
-
+Edit group
+    ${old_list}=   Get Group List
+    ${len}=    Get Length    ${old_list}
+    ${index}=    Evaluate   random.randrange(${len})    random
+    ${random_group}=   Get From List   ${old_list}   ${index}
+    ${edit_group}=  New Group    name55   header478   footer325
+    Edit group    ${random_group}    ${edit_group}
+    ${new_list}=   Get Group List
+    Replace Values List    ${old_list}   ${index}   ${edit_group}
+    Group Lists Should Be Equal    ${new_list}    ${old_list}
 
 
 
