@@ -1,0 +1,21 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`middlename`, `c`.`nickname`, `c`.`company`, `c`.`title`, `c`.`address`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`fax`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`homepage`, `c`.`address2`, `c`.`phone2`, `c`.`notes`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`middlename`, `c`.`nickname`, `c`.`company`, `c`.`title`, `c`.`address`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`fax`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`homepage`, `c`.`address2`, `c`.`phone2`, `c`.`notes`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`middlename`, `c`.`nickname`, `c`.`company`, `c`.`title`, `c`.`address`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`fax`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`homepage`, `c`.`address2`, `c`.`phone2`, `c`.`notes`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+
+COMMIT
+RELEASE CONNECTION

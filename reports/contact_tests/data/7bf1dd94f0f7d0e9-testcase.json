@@ -1,0 +1,65 @@
+{
+  "uid" : "7bf1dd94f0f7d0e9",
+  "name" : "test_group_list",
+  "title" : "Test group list",
+  "time" : {
+    "start" : 1469701579541,
+    "stop" : 1469701579708,
+    "duration" : 167
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 1
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "5b0130e849a21d80",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ {
+    "name" : "Verify sorted lists group from home page and database",
+    "title" : "Verify sorted lists group from home page and database",
+    "time" : {
+      "start" : 1469701579618,
+      "stop" : 1469701579708,
+      "duration" : 90
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "4243779f-e029-4f37-bdc9-56384a7aeb88-attachment.txt",
+    "type" : "text/plain",
+    "size" : 164,
+    "uid" : "327c9138a5dc2f88"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "test.group"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "thread",
+    "value" : "9516-MainThread"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

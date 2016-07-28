@@ -1,0 +1,125 @@
+{
+  "uid" : "3647ef6c299b8eae",
+  "name" : "test_edit_random_contact[None::::::::::::None:::::::None:None]",
+  "title" : "Test edit random contact [None::::::::::::None:::::::None:None]",
+  "time" : {
+    "start" : 1469703137368,
+    "stop" : 1469703140686,
+    "duration" : 3318
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 5
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "6c14e40bcba83c22",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty contact list",
+    "title" : "Given a non-empty contact list",
+    "time" : {
+      "start" : 1469703137438,
+      "stop" : 1469703137448,
+      "duration" : 10
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random contact from the list",
+    "title" : "Given a random contact from the list",
+    "time" : {
+      "start" : 1469703137448,
+      "stop" : 1469703137448,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a index of the edited contact",
+    "title" : "Given a index of the edited contact",
+    "time" : {
+      "start" : 1469703137448,
+      "stop" : 1469703137448,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I edit the contact 10:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None from the list to the contact None:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None",
+    "title" : "When I edit the contact 10:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None from the list to the contact None:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None",
+    "time" : {
+      "start" : 1469703137448,
+      "stop" : 1469703140658,
+      "duration" : 3210
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old contact list with edited contact",
+    "title" : "Then the new contact list is equal to the old contact list with edited contact",
+    "time" : {
+      "start" : 1469703140658,
+      "stop" : 1469703140685,
+      "duration" : 27
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "eafa496f-edca-4971-b0ad-4fe23bb8f24b-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1227,
+    "uid" : "4b194c0ac84f07b2"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  } ],
+  "parameters" : [ ]
+}

@@ -1,0 +1,12 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION

@@ -1,0 +1,95 @@
+{
+  "uid" : "ac9fe6cebca8449",
+  "name" : "test_add_contact1[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None]",
+  "title" : "Test add contact 1 [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None]",
+  "time" : {
+    "start" : 1469703126435,
+    "stop" : 1469703132476,
+    "duration" : 6041
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f2f89d6b878235e8",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1469703128679,
+      "stop" : 1469703128700,
+      "duration" : 21
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a contact None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None to the list",
+    "title" : "When I add a contact None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None to the list",
+    "time" : {
+      "start" : 1469703128700,
+      "stop" : 1469703132476,
+      "duration" : 3776
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old list with the added contact",
+    "title" : "Then the new contact list is equal to the old list with the added contact",
+    "time" : {
+      "start" : 1469703132476,
+      "stop" : 1469703132476,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "467a1d93-c4e5-49c6-aeda-eb7e2af7959f-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1227,
+    "uid" : "f1cb3abfdc09080b"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

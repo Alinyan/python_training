@@ -1,0 +1,89 @@
+{
+  "uid" : "b05d39eb962db59a",
+  "name" : "test_contact_on_edit_page",
+  "title" : "Test contact on edit page",
+  "time" : {
+    "start" : 1469703140690,
+    "stop" : 1469703141361,
+    "duration" : 671
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f2f89d6b878235e8",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a contact list",
+    "title" : "Given a contact list",
+    "time" : {
+      "start" : 1469703140750,
+      "stop" : 1469703140931,
+      "duration" : 181
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a index of random contact",
+    "title" : "Given a index of random contact",
+    "time" : {
+      "start" : 1469703140931,
+      "stop" : 1469703140932,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Verify equal contacts from home page and contacts from edit page",
+    "title" : "Verify equal contacts from home page and contacts from edit page",
+    "time" : {
+      "start" : 1469703140932,
+      "stop" : 1469703141361,
+      "duration" : 429
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  } ],
+  "parameters" : [ ]
+}

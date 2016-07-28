@@ -1,0 +1,95 @@
+{
+  "uid" : "3d34dc8436f0193d",
+  "name" : "test_add_group_for_contact[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "title" : "Test add group for contact [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "time" : {
+    "start" : 1469703145902,
+    "stop" : 1469703146415,
+    "duration" : 513
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "6c14e40bcba83c22",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty contact list with random group",
+    "title" : "Given a non-empty contact list with random group",
+    "time" : {
+      "start" : 1469703145970,
+      "stop" : 1469703145982,
+      "duration" : 12
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add group 325:New group 1324:New header 125484:Footer_of_group_new for contact 11:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:firstname4drewb1qe.lastnameqvq-vvfitcbmiddlenamey5vddibcehf.@oao-dream-housefjehjntmce:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None",
+    "title" : "When I add group 325:New group 1324:New header 125484:Footer_of_group_new for contact 11:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:firstname4drewb1qe.lastnameqvq-vvfitcbmiddlenamey5vddibcehf.@oao-dream-housefjehjntmce:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None",
+    "time" : {
+      "start" : 1469703145982,
+      "stop" : 1469703146408,
+      "duration" : 426
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new groups of contact are equal to the old groups of contact list with added group for contact",
+    "title" : "Then the new groups of contact are equal to the old groups of contact list with added group for contact",
+    "time" : {
+      "start" : 1469703146408,
+      "stop" : 1469703146414,
+      "duration" : 6
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "86c47a18-f4f6-49a1-9146-d33cb6c3b4b4-attachment.txt",
+    "type" : "text/plain",
+    "size" : 2801,
+    "uid" : "8b03c58c0e351b5b"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

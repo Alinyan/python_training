@@ -1,0 +1,50 @@
+{
+  "uid" : "ea5440847a4e8794",
+  "name" : "test_delete_group_by_id[None:::]",
+  "title" : "Test delete group by id [None:::]",
+  "time" : {
+    "start" : 1469666123809,
+    "stop" : 1469666124285,
+    "duration" : 476
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "5f19eebaa1217e60",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "b39b8097-edd8-492a-9412-c22c654af3e5-attachment.txt",
+    "type" : "text/plain",
+    "size" : 492,
+    "uid" : "611694bad355c19a"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9504-MainThread"
+  } ],
+  "parameters" : [ ]
+}

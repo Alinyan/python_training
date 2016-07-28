@@ -1,0 +1,50 @@
+{
+  "uid" : "8157868e4ffb499d",
+  "name" : "test_add_group[None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "title" : "Test add group [None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "time" : {
+    "start" : 1469666119320,
+    "stop" : 1469666123254,
+    "duration" : 3934
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "5f19eebaa1217e60",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "e7b8325c-3bcc-48c2-ae42-fb7f474cea5e-attachment.txt",
+    "type" : "text/plain",
+    "size" : 328,
+    "uid" : "cf2604fd88ba6cb1"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9504-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  } ],
+  "parameters" : [ ]
+}

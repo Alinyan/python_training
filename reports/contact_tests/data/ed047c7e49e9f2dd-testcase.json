@@ -1,0 +1,110 @@
+{
+  "uid" : "ed047c7e49e9f2dd",
+  "name" : "test_delete_group_by_id[None:Name1:Header1:Footer1]",
+  "title" : "Test delete group by id [None:Name1:Header1:Footer1]",
+  "time" : {
+    "start" : 1469701573336,
+    "stop" : 1469701573767,
+    "duration" : 431
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "5b0130e849a21d80",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty group list",
+    "title" : "Given a non-empty group list",
+    "time" : {
+      "start" : 1469701573450,
+      "stop" : 1469701573450,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random group from the list",
+    "title" : "Given a random group from the list",
+    "time" : {
+      "start" : 1469701573450,
+      "stop" : 1469701573450,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I delete the group from the list",
+    "title" : "When I delete the group from the list",
+    "time" : {
+      "start" : 1469701573450,
+      "stop" : 1469701573765,
+      "duration" : 315
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old group list without the deleted group",
+    "title" : "Then the new group list is equal to the old group list without the deleted group",
+    "time" : {
+      "start" : 1469701573765,
+      "stop" : 1469701573767,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "6f989908-14e1-4b93-a326-08f5696848ef-attachment.txt",
+    "type" : "text/plain",
+    "size" : 492,
+    "uid" : "ea686c35dfc88690"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9516-MainThread"
+  } ],
+  "parameters" : [ ]
+}

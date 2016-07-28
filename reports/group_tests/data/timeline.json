@@ -1,0 +1,119 @@
+{
+  "hosts" : [ {
+    "title" : "NTB-16371",
+    "threads" : [ {
+      "title" : "10388-MainThread",
+      "testCases" : [ {
+        "uid" : "a1505691e76c775f",
+        "name" : "test_add_group[None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+        "title" : "Test add group [None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+        "time" : {
+          "start" : 1469703450913,
+          "stop" : 1469703454305,
+          "duration" : 3392
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "45959255b3239ab2",
+        "name" : "test_delete_group_by_id[None:Name1:Header1:Footer1]",
+        "title" : "Test delete group by id [None:Name1:Header1:Footer1]",
+        "time" : {
+          "start" : 1469703454311,
+          "stop" : 1469703454741,
+          "duration" : 430
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "194e6687af32c17a",
+        "name" : "test_delete_group_by_id[None:::]",
+        "title" : "Test delete group by id [None:::]",
+        "time" : {
+          "start" : 1469703454745,
+          "stop" : 1469703455137,
+          "duration" : 392
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "d4a1e7660faf1a4b",
+        "name" : "test_edit_first_group[None:Name1:Header1:Footer1]",
+        "title" : "Test edit first group [None:Name1:Header1:Footer1]",
+        "time" : {
+          "start" : 1469703455141,
+          "stop" : 1469703456999,
+          "duration" : 1858
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "8490e0907fb90eaa",
+        "name" : "test_edit_first_group[None:::]",
+        "title" : "Test edit first group [None:::]",
+        "time" : {
+          "start" : 1469703457002,
+          "stop" : 1469703458024,
+          "duration" : 1022
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "c1ff3a843fbbd3af",
+        "name" : "test_modify_group_name[None:Name1:Header1:Footer1]",
+        "title" : "Test modify group name [None:Name1:Header1:Footer1]",
+        "time" : {
+          "start" : 1469703458029,
+          "stop" : 1469703458653,
+          "duration" : 624
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "3e55dfdc3a48edee",
+        "name" : "test_modify_group_name[None:::]",
+        "title" : "Test modify group name [None:::]",
+        "time" : {
+          "start" : 1469703458657,
+          "stop" : 1469703459299,
+          "duration" : 642
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "730b27037ebc49e6",
+        "name" : "test_modify_group_header[None:Name1:Header1:Footer1]",
+        "title" : "Test modify group header [None:Name1:Header1:Footer1]",
+        "time" : {
+          "start" : 1469703459301,
+          "stop" : 1469703459936,
+          "duration" : 635
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "cfed8b3caf28ae14",
+        "name" : "test_modify_group_header[None:::]",
+        "title" : "Test modify group header [None:::]",
+        "time" : {
+          "start" : 1469703459940,
+          "stop" : 1469703460557,
+          "duration" : 617
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "4b66f54f44ecf197",
+        "name" : "test_group_list",
+        "title" : "Test group list",
+        "time" : {
+          "start" : 1469703460562,
+          "stop" : 1469703460758,
+          "duration" : 196
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      } ]
+    } ]
+  } ]
+}

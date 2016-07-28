@@ -1,0 +1,95 @@
+{
+  "uid" : "8490e0907fb90eaa",
+  "name" : "test_edit_first_group[None:::]",
+  "title" : "Test edit first group [None:::]",
+  "time" : {
+    "start" : 1469703457002,
+    "stop" : 1469703458024,
+    "duration" : 1022
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "72237247de24805a",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty group list",
+    "title" : "Given a non-empty group list",
+    "time" : {
+      "start" : 1469703457092,
+      "stop" : 1469703457092,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I edit a first group from the list to edit group None:Name_of_group_new:Header_of_group_new:Footer_of_group_new",
+    "title" : "When I edit a first group from the list to edit group None:Name_of_group_new:Header_of_group_new:Footer_of_group_new",
+    "time" : {
+      "start" : 1469703457092,
+      "stop" : 1469703458021,
+      "duration" : 929
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old group list with edited group",
+    "title" : "Then the new group list is equal to the old group list with edited group",
+    "time" : {
+      "start" : 1469703458021,
+      "stop" : 1469703458023,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "55e111a8-225a-4614-be2f-7357be4c6beb-attachment.txt",
+    "type" : "text/plain",
+    "size" : 492,
+    "uid" : "cb82c48bdda356a4"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "thread",
+    "value" : "10388-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

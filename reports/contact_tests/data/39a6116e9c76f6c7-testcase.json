@@ -1,0 +1,110 @@
+{
+  "uid" : "39a6116e9c76f6c7",
+  "name" : "test_delete_random_contact[None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+  "title" : "Test delete random contact [None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+  "time" : {
+    "start" : 1469703132486,
+    "stop" : 1469703133020,
+    "duration" : 534
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f2f89d6b878235e8",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty contact list",
+    "title" : "Given a non-empty contact list",
+    "time" : {
+      "start" : 1469703132577,
+      "stop" : 1469703132577,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random contact from the list",
+    "title" : "Given a random contact from the list",
+    "time" : {
+      "start" : 1469703132577,
+      "stop" : 1469703132577,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I delete the contact from the list",
+    "title" : "When I delete the contact from the list",
+    "time" : {
+      "start" : 1469703132577,
+      "stop" : 1469703133016,
+      "duration" : 439
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old contact list without the deleted contact",
+    "title" : "Then the new contact list is equal to the old contact list without the deleted contact",
+    "time" : {
+      "start" : 1469703133016,
+      "stop" : 1469703133019,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "39aff361-254e-4907-9b89-0d45b45f40f6-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1227,
+    "uid" : "c846a13a8d92e8d4"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  } ],
+  "parameters" : [ ]
+}

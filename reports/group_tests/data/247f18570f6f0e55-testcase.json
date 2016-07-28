@@ -1,0 +1,95 @@
+{
+  "uid" : "247f18570f6f0e55",
+  "name" : "test_add_group[None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "title" : "Test add group [None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "time" : {
+    "start" : 1469699523128,
+    "stop" : 1469699527100,
+    "duration" : 3972
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "bc39a6b9b1d605fc",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ {
+    "name" : "Given a group list",
+    "title" : "Given a group list",
+    "time" : {
+      "start" : 1469699525738,
+      "stop" : 1469699525741,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add a group None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB to the list",
+    "title" : "When I add a group None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB to the list",
+    "time" : {
+      "start" : 1469699525741,
+      "stop" : 1469699527096,
+      "duration" : 1355
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old list with the added group",
+    "title" : "Then the new group list is equal to the old list with the added group",
+    "time" : {
+      "start" : 1469699527096,
+      "stop" : 1469699527099,
+      "duration" : 3
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "2e70f756-efc2-4315-ba5d-d0c42887fa3c-attachment.txt",
+    "type" : "text/plain",
+    "size" : 328,
+    "uid" : "eeacf36ec2100cfe"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "7292-MainThread"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  } ],
+  "parameters" : [ ]
+}

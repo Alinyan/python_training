@@ -1,0 +1,84 @@
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_name` = %s
+[u'New group 1324']
+
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`middlename`, `c`.`nickname`, `c`.`company`, `c`.`title`, `c`.`address`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`fax`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`homepage`, `c`.`address2`, `c`.`phone2`, `c`.`notes`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+  AND %s NOT IN (
+    SELECT `t-1`.`group_id`
+    FROM `address_in_groups` `t-1`
+    WHERE `c`.`id` = `t-1`.`id`
+    )
+[325]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_name` = %s
+[u'New group 1324']
+
+SELECT `c`.`id`, `c`.`firstname`, `c`.`lastname`, `c`.`middlename`, `c`.`nickname`, `c`.`company`, `c`.`title`, `c`.`address`, `c`.`home`, `c`.`mobile`, `c`.`work`, `c`.`fax`, `c`.`email`, `c`.`email2`, `c`.`email3`, `c`.`homepage`, `c`.`address2`, `c`.`phone2`, `c`.`notes`, `c`.`deprecated`
+FROM `addressbook` `c`
+WHERE `c`.`deprecated` IS NULL
+  AND %s NOT IN (
+    SELECT `t-1`.`group_id`
+    FROM `address_in_groups` `t-1`
+    WHERE `c`.`id` = `t-1`.`id`
+    )
+[325]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_name` = %s
+[u'New group 1324']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[325]
+
+SELECT `id`, `firstname`, `lastname`, `middlename`, `nickname`, `company`, `title`, `address`, `home`, `mobile`, `work`, `fax`, `email`, `email2`, `email3`, `homepage`, `address2`, `phone2`, `notes`, `deprecated`
+FROM `addressbook`
+WHERE `id` = %s
+[9]
+
+COMMIT
+RELEASE CONNECTION
+GET CONNECTION FROM THE LOCAL POOL
+SELECT `g`.`group_id`, `g`.`group_name`, `g`.`group_header`, `g`.`group_footer`
+FROM `group_list` `g`
+WHERE `g`.`group_name` = %s
+[u'New group 1324']
+
+SELECT `T1`.`id`
+FROM `address_in_groups` `T1`
+WHERE `T1`.`group_id` = %s
+[325]
+
+SELECT `id`, `firstname`, `lastname`, `middlename`, `nickname`, `company`, `title`, `address`, `home`, `mobile`, `work`, `fax`, `email`, `email2`, `email3`, `homepage`, `address2`, `phone2`, `notes`, `deprecated`
+FROM `addressbook`
+WHERE `id` IN (%s, %s)
+[11, 9]
+
+COMMIT
+RELEASE CONNECTION

@@ -1,0 +1,125 @@
+{
+  "uid" : "43ebd1dad3cad143",
+  "name" : "test_edit_random_contact[None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+  "title" : "Test edit random contact [None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+  "time" : {
+    "start" : 1469703133553,
+    "stop" : 1469703137368,
+    "duration" : 3815
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 5
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f2f89d6b878235e8",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty contact list",
+    "title" : "Given a non-empty contact list",
+    "time" : {
+      "start" : 1469703133614,
+      "stop" : 1469703133620,
+      "duration" : 6
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random contact from the list",
+    "title" : "Given a random contact from the list",
+    "time" : {
+      "start" : 1469703133620,
+      "stop" : 1469703133620,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a index of the edited contact",
+    "title" : "Given a index of the edited contact",
+    "time" : {
+      "start" : 1469703133620,
+      "stop" : 1469703133620,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I edit the contact 10:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:firstname4drewb1qe.lastnameqvq-vvfitcbmiddlenamey5vddibcehf.@oao-dream-housefjehjntmce:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None from the list to the contact None:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None",
+    "title" : "When I edit the contact 10:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:firstname4drewb1qe.lastnameqvq-vvfitcbmiddlenamey5vddibcehf.@oao-dream-housefjehjntmce:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None from the list to the contact None:Ivanova:Marina:Ivanovna:PrettyGirl:economist:OAO Dream-House:Russia, Lenina 10:8889652:9261234567:3654578:9871245:mar@mail.ru:marina@oao-dream-house.com:marina_cool@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to swim:None:None",
+    "time" : {
+      "start" : 1469703133620,
+      "stop" : 1469703137319,
+      "duration" : 3699
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new contact list is equal to the old contact list with edited contact",
+    "title" : "Then the new contact list is equal to the old contact list with edited contact",
+    "time" : {
+      "start" : 1469703137319,
+      "stop" : 1469703137368,
+      "duration" : 49
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "ab93c03f-472c-496b-91c6-3ac286efd22f-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1227,
+    "uid" : "e6fc5df26bf22a24"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  } ],
+  "parameters" : [ ]
+}

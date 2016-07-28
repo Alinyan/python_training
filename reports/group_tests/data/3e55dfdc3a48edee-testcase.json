@@ -1,0 +1,110 @@
+{
+  "uid" : "3e55dfdc3a48edee",
+  "name" : "test_modify_group_name[None:::]",
+  "title" : "Test modify group name [None:::]",
+  "time" : {
+    "start" : 1469703458657,
+    "stop" : 1469703459299,
+    "duration" : 642
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 4
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "72237247de24805a",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty group list",
+    "title" : "Given a non-empty group list",
+    "time" : {
+      "start" : 1469703458738,
+      "stop" : 1469703458739,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Given a random group from the list",
+    "title" : "Given a random group from the list",
+    "time" : {
+      "start" : 1469703458739,
+      "stop" : 1469703458739,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I edit a group 327:New group 1324:Header_of_group_new:Footer_of_group_new from the list to edit group None:New group 1324:None:None",
+    "title" : "When I edit a group 327:New group 1324:Header_of_group_new:Footer_of_group_new from the list to edit group None:New group 1324:None:None",
+    "time" : {
+      "start" : 1469703458739,
+      "stop" : 1469703459296,
+      "duration" : 557
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new group list is equal to the old group list with edited group",
+    "title" : "Then the new group list is equal to the old group list with edited group",
+    "time" : {
+      "start" : 1469703459296,
+      "stop" : 1469703459298,
+      "duration" : 2
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "22483531-9c5b-4ccf-9a9d-7fdb87e45af6-attachment.txt",
+    "type" : "text/plain",
+    "size" : 492,
+    "uid" : "6b507aaff516b234"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  }, {
+    "name" : "thread",
+    "value" : "10388-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  } ],
+  "parameters" : [ ]
+}

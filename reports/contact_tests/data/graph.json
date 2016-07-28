@@ -1,0 +1,102 @@
+{
+  "testCases" : [ {
+    "uid" : "ac9fe6cebca8449",
+    "name" : "test_add_contact1[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None]",
+    "title" : "Test add contact 1 [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None]",
+    "time" : {
+      "start" : 1469703126435,
+      "stop" : 1469703132476,
+      "duration" : 6041
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "39a6116e9c76f6c7",
+    "name" : "test_delete_random_contact[None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+    "title" : "Test delete random contact [None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+    "time" : {
+      "start" : 1469703132486,
+      "stop" : 1469703133020,
+      "duration" : 534
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "39db042592bd78c3",
+    "name" : "test_delete_random_contact[None::::::::::::None:::::::None:None]",
+    "title" : "Test delete random contact [None::::::::::::None:::::::None:None]",
+    "time" : {
+      "start" : 1469703133022,
+      "stop" : 1469703133550,
+      "duration" : 528
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "43ebd1dad3cad143",
+    "name" : "test_edit_random_contact[None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+    "title" : "Test edit random contact [None:Petrova:Olga:Petrovna:Star:economist:OAO Dream-House:Russia, Lenina 5:7894563:9221547586:6123457:6123458:None:olga-star@oao-dream-house.com:olga@dh.com:www.dream-house.com:Russia, Spb, Lenina 17:145:Likes to read books:None:None]",
+    "time" : {
+      "start" : 1469703133553,
+      "stop" : 1469703137368,
+      "duration" : 3815
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "3b41c4abd5d978",
+    "name" : "test_edit_random_contact[None::::::::::::None:::::::None:None]",
+    "title" : "Test edit random contact [None::::::::::::None:::::::None:None]",
+    "time" : {
+      "start" : 1469703137368,
+      "stop" : 1469703140686,
+      "duration" : 3318
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "b05d39eb962db59a",
+    "name" : "test_contact_on_edit_page",
+    "title" : "Test contact on edit page",
+    "time" : {
+      "start" : 1469703140690,
+      "stop" : 1469703141361,
+      "duration" : 671
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "c3c6ef680df01fdd",
+    "name" : "test_add_contact_in_group[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "title" : "Test add contact in group [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "time" : {
+      "start" : 1469703141371,
+      "stop" : 1469703145127,
+      "duration" : 3756
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "4918ab0a4c3e1c22",
+    "name" : "test_delete_contact_from_group[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "title" : "Test delete contact from group [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "time" : {
+      "start" : 1469703145129,
+      "stop" : 1469703145898,
+      "duration" : 769
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "815ca4febeeeb111",
+    "name" : "test_add_group_for_contact[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "title" : "Test add group for contact [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+    "time" : {
+      "start" : 1469703145902,
+      "stop" : 1469703146415,
+      "duration" : 513
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

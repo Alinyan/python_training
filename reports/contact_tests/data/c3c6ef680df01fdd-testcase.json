@@ -1,0 +1,95 @@
+{
+  "uid" : "c3c6ef680df01fdd",
+  "name" : "test_add_contact_in_group[None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "title" : "Test add contact in group [None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None-None:name3DOzsclpGqlNB:headertpsdTCAKl:footeraCdRa8 CB]",
+  "time" : {
+    "start" : 1469703141371,
+    "stop" : 1469703145127,
+    "duration" : 3756
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "f2f89d6b878235e8",
+    "name" : "test.contact",
+    "title" : "Contact"
+  },
+  "steps" : [ {
+    "name" : "Given a non-empty contact list random group",
+    "title" : "Given a non-empty contact list random group",
+    "time" : {
+      "start" : 1469703141421,
+      "stop" : 1469703141431,
+      "duration" : 10
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "When I add group 325:New group 1324:New header 125484:Footer_of_group_new for contact None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None",
+    "title" : "When I add group 325:New group 1324:New header 125484:Footer_of_group_new for contact None:lastnameqvq VVfItcb:firstname4dReWB1qe:middlenameY5vDDibceHf:Starle7cXV82d8wiygjzD:blablablaSo3lSVzlBu6D  0e3O:OAO Dream-HouseFJehjntMCe:spb:7894563c4r0AG ABII:9221547586qLGWAuHd7xcHa5U7:6123457asoPe:54544545  F ASeyPH:None:olga-star@oao-dream-house.commfAEm:olga@dh.comTfAh23ru 3Ec:www.dream-house.coma ev0CHq  m:Russia, Spb, Lenina 17spWcepbhA:23545655jxn:blablablaCAdudXafCa4K:None:None",
+    "time" : {
+      "start" : 1469703141431,
+      "stop" : 1469703145122,
+      "duration" : 3691
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "Then the new groups of contact are equal to the old groups of contact list with added group for contact",
+    "title" : "Then the new groups of contact are equal to the old groups of contact list with added group for contact",
+    "time" : {
+      "start" : 1469703145122,
+      "stop" : 1469703145126,
+      "duration" : 4
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "48fa3ae9-b5bb-421f-a334-e046cfd807ad-attachment.txt",
+    "type" : "text/plain",
+    "size" : 1431,
+    "uid" : "c67dbef5017c4a2d"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "9476-MainThread"
+  }, {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "suite-name",
+    "value" : "test.contact"
+  } ],
+  "parameters" : [ ]
+}

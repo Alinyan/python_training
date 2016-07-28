@@ -1,0 +1,50 @@
+{
+  "uid" : "8433c19e1f384245",
+  "name" : "test_modify_group_header[None:::]",
+  "title" : "Test modify group header [None:::]",
+  "time" : {
+    "start" : 1469699533478,
+    "stop" : 1469699534393,
+    "duration" : 915
+  },
+  "summary" : {
+    "attachments" : 1,
+    "steps" : 0
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "736472d458a9154e",
+    "name" : "test.group",
+    "title" : "Group"
+  },
+  "steps" : [ ],
+  "attachments" : [ {
+    "title" : "Captured stdout call",
+    "source" : "aeb4aac6-b4b4-43e4-bfe7-21bd7bc90484-attachment.txt",
+    "type" : "text/plain",
+    "size" : 492,
+    "uid" : "aafbfcdf30fe0938"
+  } ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "NTB-16371"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "7292-MainThread"
+  }, {
+    "name" : "suite-title",
+    "value" : null
+  }, {
+    "name" : "suite-name",
+    "value" : "test.group"
+  } ],
+  "parameters" : [ ]
+}
